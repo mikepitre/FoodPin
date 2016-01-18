@@ -63,11 +63,7 @@ class RestaurantTableVC: UITableViewController {
         cell.locationLabel.text = restaurantLocations[indexPath.row]
         cell.typeLabel.text = restaurantTypes[indexPath.row]
         
-        if restaurantIsVisited[indexPath.row] == true {
-            cell.accessoryType = .Checkmark
-        } else {
-            cell.accessoryType = .None
-        }
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .Checkmark : .None
 
         return cell
     }
@@ -87,10 +83,13 @@ class RestaurantTableVC: UITableViewController {
         let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .Default, handler: callActionHandler)
         optionMenu.addAction(callAction)
         
-        let isVisitedAction = UIAlertAction(title: "I've been here", style: .Default) { (action: UIAlertAction) -> Void in
+        let visitedTitle = restaurantIsVisited[indexPath.row] ? "I haven't been here" : "I've been here"
+        let isVisitedAction = UIAlertAction(title: visitedTitle, style: .Default) { (action: UIAlertAction) -> Void in
+            
             let cell = tableView.cellForRowAtIndexPath(indexPath)
-            cell?.accessoryType = .Checkmark
-            self.restaurantIsVisited[indexPath.row] = true
+            self.restaurantIsVisited[indexPath.row] = self.restaurantIsVisited[indexPath.row] ? false : true
+            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .Checkmark : .None
+            
         }
         
         optionMenu.addAction(isVisitedAction)
