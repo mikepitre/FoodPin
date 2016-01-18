@@ -69,7 +69,6 @@ class RestaurantTableVC: UITableViewController {
             cell.accessoryType = .None
         }
 
-
         return cell
     }
     
