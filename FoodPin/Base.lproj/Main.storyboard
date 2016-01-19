@@ -110,10 +110,33 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wVO-Ob-97f">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqM-m4-gvm">
+                                <rect key="frame" x="267" y="144" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.97268270570000004" green="1" blue="0.97697381770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2j8-yQ-uQY">
+                                <rect key="frame" x="281" y="173" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.97268270570000004" green="1" blue="0.97697381770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nH-db-BSh">
+                                <rect key="frame" x="217" y="112" width="167" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.97268270570000004" green="1" blue="0.97697381770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1nH-db-BSh" firstAttribute="centerX" secondItem="wVO-Ob-97f" secondAttribute="centerX" id="2Eb-C0-c5M"/>
                             <constraint firstAttribute="trailing" secondItem="wVO-Ob-97f" secondAttribute="trailing" id="5eG-7a-fJo"/>
+                            <constraint firstItem="1nH-db-BSh" firstAttribute="top" secondItem="mB7-Xz-jph" secondAttribute="bottom" constant="48" id="Bfi-lg-8I7"/>
+                            <constraint firstItem="CqM-m4-gvm" firstAttribute="top" secondItem="1nH-db-BSh" secondAttribute="bottom" constant="8" id="E3V-jH-vo9"/>
+                            <constraint firstItem="2j8-yQ-uQY" firstAttribute="centerX" secondItem="wVO-Ob-97f" secondAttribute="centerX" id="Mld-B2-mdN"/>
+                            <constraint firstItem="CqM-m4-gvm" firstAttribute="centerX" secondItem="wVO-Ob-97f" secondAttribute="centerX" id="PjM-VQ-E6a"/>
                             <constraint firstItem="wVO-Ob-97f" firstAttribute="top" secondItem="wG9-bn-Pxp" secondAttribute="topMargin" id="Uxj-0g-LVH"/>
                             <constraint firstItem="c4K-8b-NWG" firstAttribute="top" secondItem="wVO-Ob-97f" secondAttribute="bottom" id="caR-60-aqL"/>
                             <constraint firstItem="wVO-Ob-97f" firstAttribute="leading" secondItem="wG9-bn-Pxp" secondAttribute="leadingMargin" constant="-20" id="cu1-6e-2RF"/>
@@ -121,6 +144,7 @@
                             <constraint firstItem="wVO-Ob-97f" firstAttribute="leading" secondItem="wG9-bn-Pxp" secondAttribute="leading" id="i6l-D4-JKK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wVO-Ob-97f" secondAttribute="trailing" constant="-20" id="iCZ-as-jTp"/>
                             <constraint firstItem="wVO-Ob-97f" firstAttribute="top" secondItem="wG9-bn-Pxp" secondAttribute="top" id="j7p-78-Ofl"/>
+                            <constraint firstItem="2j8-yQ-uQY" firstAttribute="top" secondItem="CqM-m4-gvm" secondAttribute="bottom" constant="8" id="xyH-It-SZ2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -133,6 +157,9 @@
                     </view>
                     <connections>
                         <outlet property="restaurantImageView" destination="wVO-Ob-97f" id="8aC-3o-CuI"/>
+                        <outlet property="restaurantLocationLabel" destination="CqM-m4-gvm" id="Skb-rJ-cdH"/>
+                        <outlet property="restaurantNameLabel" destination="1nH-db-BSh" id="YIR-sD-CPF"/>
+                        <outlet property="restaurantTypeLabel" destination="2j8-yQ-uQY" id="Q0k-BN-kv7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIx-5r-8dO" userLabel="First Responder" sceneMemberID="firstResponder"/>
