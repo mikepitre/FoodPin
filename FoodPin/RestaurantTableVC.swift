@@ -103,8 +103,10 @@ class RestaurantTableVC: UITableViewController {
         let shareAction = UITableViewRowAction(style: .Default, title: "Share") { (UITableViewRowAction, NSIndexPath) -> Void in
             
             let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
-            let activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
-            self.presentViewController(activityController, animated: true, completion: nil)
+            if let imageToShare = UIImage(named: "\(self.restaurantImages[indexPath.row])") {
+                let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                self.presentViewController(activityController, animated: true, completion: nil)
+            }
         }
         
         let deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { (UITableViewRowAction, NSIndexPath) -> Void in
