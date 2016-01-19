@@ -80,6 +80,7 @@
                                     <outlet property="nameLabel" destination="Mbw-Ia-fTq" id="Ya6-mv-da2"/>
                                     <outlet property="thumbnailImageView" destination="Ecs-Jh-cv0" id="IoW-y2-DRK"/>
                                     <outlet property="typeLabel" destination="8z0-KV-7oC" id="Ah5-Qp-it6"/>
+                                    <segue destination="bkD-l6-aHe" kind="show" identifier="showRestaurantDetail" id="ol0-t6-hbs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,6 +94,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCi-gj-GTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1273" y="348"/>
+        </scene>
+        <!--Restaurant DetailVC-->
+        <scene sceneID="dsU-19-Bj7">
+            <objects>
+                <viewController id="bkD-l6-aHe" customClass="RestaurantDetailVC" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mB7-Xz-jph"/>
+                        <viewControllerLayoutGuide type="bottom" id="c4K-8b-NWG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wG9-bn-Pxp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wVO-Ob-97f">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wVO-Ob-97f" secondAttribute="trailing" id="5eG-7a-fJo"/>
+                            <constraint firstItem="wVO-Ob-97f" firstAttribute="top" secondItem="wG9-bn-Pxp" secondAttribute="topMargin" id="Uxj-0g-LVH"/>
+                            <constraint firstItem="c4K-8b-NWG" firstAttribute="top" secondItem="wVO-Ob-97f" secondAttribute="bottom" id="caR-60-aqL"/>
+                            <constraint firstItem="wVO-Ob-97f" firstAttribute="leading" secondItem="wG9-bn-Pxp" secondAttribute="leadingMargin" constant="-20" id="cu1-6e-2RF"/>
+                            <constraint firstItem="c4K-8b-NWG" firstAttribute="top" secondItem="wVO-Ob-97f" secondAttribute="bottom" id="eyx-wY-ddg"/>
+                            <constraint firstItem="wVO-Ob-97f" firstAttribute="leading" secondItem="wG9-bn-Pxp" secondAttribute="leading" id="i6l-D4-JKK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wVO-Ob-97f" secondAttribute="trailing" constant="-20" id="iCZ-as-jTp"/>
+                            <constraint firstItem="wVO-Ob-97f" firstAttribute="top" secondItem="wG9-bn-Pxp" secondAttribute="top" id="j7p-78-Ofl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Uxj-0g-LVH"/>
+                                <exclude reference="cu1-6e-2RF"/>
+                                <exclude reference="iCZ-as-jTp"/>
+                                <exclude reference="caR-60-aqL"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="wVO-Ob-97f" id="8aC-3o-CuI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIx-5r-8dO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="348"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ua-50-45Z">
