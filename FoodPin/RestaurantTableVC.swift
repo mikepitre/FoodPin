@@ -68,34 +68,34 @@ class RestaurantTableVC: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: UIAlertControllerStyle.ActionSheet)
-        optionMenu.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
-        self.presentViewController(optionMenu, animated: true, completion: nil)
-        
-        let callActionHandler = { (action: UIAlertAction!) -> Void in
-            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: UIAlertControllerStyle.Alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            self.presentViewController(alertMessage, animated: true, completion: nil)
-        }
-        
-        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .Default, handler: callActionHandler)
-        optionMenu.addAction(callAction)
-        
-        let visitedTitle = restaurantIsVisited[indexPath.row] ? "I haven't been here" : "I've been here"
-        let isVisitedAction = UIAlertAction(title: visitedTitle, style: .Default) { (action: UIAlertAction) -> Void in
-            
-            let cell = tableView.cellForRowAtIndexPath(indexPath)
-            self.restaurantIsVisited[indexPath.row] = self.restaurantIsVisited[indexPath.row] ? false : true
-            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .Checkmark : .None
-            
-        }
-        
-        optionMenu.addAction(isVisitedAction)
-        
-        tableView.deselectRowAtIndexPath(indexPath, animated: false)
-    }
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+//        optionMenu.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+//        self.presentViewController(optionMenu, animated: true, completion: nil)
+//        
+//        let callActionHandler = { (action: UIAlertAction!) -> Void in
+//            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: UIAlertControllerStyle.Alert)
+//            alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//            self.presentViewController(alertMessage, animated: true, completion: nil)
+//        }
+//        
+//        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .Default, handler: callActionHandler)
+//        optionMenu.addAction(callAction)
+//        
+//        let visitedTitle = restaurantIsVisited[indexPath.row] ? "I haven't been here" : "I've been here"
+//        let isVisitedAction = UIAlertAction(title: visitedTitle, style: .Default) { (action: UIAlertAction) -> Void in
+//            
+//            let cell = tableView.cellForRowAtIndexPath(indexPath)
+//            self.restaurantIsVisited[indexPath.row] = self.restaurantIsVisited[indexPath.row] ? false : true
+//            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .Checkmark : .None
+//            
+//        }
+//        
+//        optionMenu.addAction(isVisitedAction)
+//        
+//        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+//    }
     
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
@@ -142,14 +142,21 @@ class RestaurantTableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destinationViewController as! RestaurantDetailVC
+                destinationController.restaurantImage = restaurantImages[indexPath.row]
+                destinationController.restaurantName = restaurantNames[indexPath.row]
+                destinationController.restaurantLocation = restaurantLocations[indexPath.row]
+                destinationController.restaurantType = restaurantTypes[indexPath.row]
+            }
+        }
     }
-    */
+
 
 }
