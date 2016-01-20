@@ -10,10 +10,7 @@ import UIKit
 
 class RestaurantDetailVC: UIViewController {
     
-    var restaurantImage = ""
-    var restaurantName = ""
-    var restaurantLocation = ""
-    var restaurantType = ""
+    var restaurant: Restaurant!
     
     @IBOutlet weak var restaurantImageView: UIImageView!
     @IBOutlet weak var restaurantNameLabel: UILabel!
@@ -24,12 +21,12 @@ class RestaurantDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        restaurantImageView.image = UIImage(named: restaurantImage)
+        restaurantImageView.image = UIImage(named: restaurant.image)
         restaurantImageView.clipsToBounds = true
         
-        restaurantNameLabel.text = restaurantName
-        restaurantTypeLabel.text = restaurantType
-        restaurantLocationLabel.text = restaurantLocation
+        restaurantNameLabel.text = restaurant.name
+        restaurantTypeLabel.text = restaurant.type
+        restaurantLocationLabel.text = restaurant.location
 
     }
 
