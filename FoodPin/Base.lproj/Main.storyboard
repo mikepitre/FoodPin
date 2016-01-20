@@ -132,7 +132,7 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb5-NG-CoL">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb5-NG-CoL">
                                                             <rect key="frame" x="195" y="0.0" width="389" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -146,10 +146,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="g2t-Rd-oaF" firstAttribute="centerY" secondItem="9WP-PX-gcf" secondAttribute="centerY" id="KBm-tC-SC6"/>
+                                                <constraint firstItem="g2t-Rd-oaF" firstAttribute="top" secondItem="9WP-PX-gcf" secondAttribute="topMargin" constant="-1" id="O4z-Du-pme"/>
                                                 <constraint firstItem="g2t-Rd-oaF" firstAttribute="leading" secondItem="9WP-PX-gcf" secondAttribute="leadingMargin" constant="6" id="Pfi-45-QtG"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="g2t-Rd-oaF" secondAttribute="trailing" id="aIh-jj-62i"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="g2t-Rd-oaF" secondAttribute="leading" id="hFu-Yw-Kqq"/>
                                                 <constraint firstItem="g2t-Rd-oaF" firstAttribute="leading" secondItem="9WP-PX-gcf" secondAttribute="leadingMargin" constant="5" id="pOd-yT-VcM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="g2t-Rd-oaF" secondAttribute="bottom" constant="-1" id="rLa-4l-0gQ"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
