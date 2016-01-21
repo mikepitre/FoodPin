@@ -171,18 +171,69 @@
                                     <outlet property="delegate" destination="bkD-l6-aHe" id="4p1-Lk-W0r"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qp0-b3-Zlg">
-                                <rect key="frame" x="534" y="72" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwl-YW-JfQ">
+                                <rect key="frame" x="540" y="72" width="40" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="WYN-Py-LGT"/>
+                                    <constraint firstAttribute="height" constant="40" id="Y0l-D8-cJq"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="rating"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="centerX" secondItem="TNh-84-VcK" secondAttribute="centerX" constant="201" id="1km-hq-6cR"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="trailing" secondItem="wG9-bn-Pxp" secondAttribute="trailingMargin" id="1ln-Ad-6Df"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="centerX" secondItem="TNh-84-VcK" secondAttribute="centerX" id="975-iO-TJw"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="trailing" secondItem="wG9-bn-Pxp" secondAttribute="trailingMargin" id="9hM-R8-x7P"/>
+                            <constraint firstItem="c4K-8b-NWG" firstAttribute="top" secondItem="Pwl-YW-JfQ" secondAttribute="bottom" constant="488" id="AJ5-SL-fyy"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="top" secondItem="mB7-Xz-jph" secondAttribute="bottom" constant="8" id="Dre-oH-aTc"/>
+                            <constraint firstItem="c4K-8b-NWG" firstAttribute="top" secondItem="Pwl-YW-JfQ" secondAttribute="bottom" constant="433" id="KUU-8a-Xyp"/>
                             <constraint firstItem="TNh-84-VcK" firstAttribute="top" secondItem="wG9-bn-Pxp" secondAttribute="top" id="KyR-fN-y0t"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="trailing" secondItem="wG9-bn-Pxp" secondAttribute="trailingMargin" id="MzS-p4-p0e"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="top" secondItem="mB7-Xz-jph" secondAttribute="bottom" constant="20" id="TLR-td-GYZ"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="top" secondItem="mB7-Xz-jph" secondAttribute="bottom" constant="8" id="WW3-Mp-dri"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="top" secondItem="mB7-Xz-jph" secondAttribute="bottom" constant="8" symbolic="YES" id="XzQ-f5-RdG"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="top" secondItem="mB7-Xz-jph" secondAttribute="bottom" constant="8" id="c3w-ij-Q6C"/>
                             <constraint firstAttribute="trailing" secondItem="TNh-84-VcK" secondAttribute="trailing" id="d1b-F2-gVg"/>
                             <constraint firstItem="TNh-84-VcK" firstAttribute="leading" secondItem="wG9-bn-Pxp" secondAttribute="leading" id="hPF-Ie-S9n"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="top" secondItem="mB7-Xz-jph" secondAttribute="bottom" constant="63" id="iyQ-uX-XpW"/>
                             <constraint firstItem="c4K-8b-NWG" firstAttribute="top" secondItem="TNh-84-VcK" secondAttribute="bottom" id="kcz-cx-UMp"/>
+                            <constraint firstItem="c4K-8b-NWG" firstAttribute="top" secondItem="Pwl-YW-JfQ" secondAttribute="bottom" constant="488" id="pW2-ts-bqr"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="trailing" secondItem="wG9-bn-Pxp" secondAttribute="trailingMargin" id="qhf-cG-yJs"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="centerX" secondItem="TNh-84-VcK" secondAttribute="centerX" id="sey-MQ-X6c"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="leading" secondItem="wG9-bn-Pxp" secondAttribute="leadingMargin" constant="520" id="tyc-X2-iGr"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="trailing" secondItem="wG9-bn-Pxp" secondAttribute="trailingMargin" id="yT8-la-YVz"/>
+                            <constraint firstItem="Pwl-YW-JfQ" firstAttribute="centerY" secondItem="TNh-84-VcK" secondAttribute="centerY" constant="-188" id="ydS-YU-k1K"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1km-hq-6cR"/>
+                                <exclude reference="975-iO-TJw"/>
+                                <exclude reference="9hM-R8-x7P"/>
+                                <exclude reference="MzS-p4-p0e"/>
+                                <exclude reference="TLR-td-GYZ"/>
+                                <exclude reference="WW3-Mp-dri"/>
+                                <exclude reference="XzQ-f5-RdG"/>
+                                <exclude reference="c3w-ij-Q6C"/>
+                                <exclude reference="iyQ-uX-XpW"/>
+                                <exclude reference="qhf-cG-yJs"/>
+                                <exclude reference="sey-MQ-X6c"/>
+                                <exclude reference="tyc-X2-iGr"/>
+                                <exclude reference="yT8-la-YVz"/>
+                                <exclude reference="ydS-YU-k1K"/>
+                                <exclude reference="AJ5-SL-fyy"/>
+                                <exclude reference="KUU-8a-Xyp"/>
+                                <exclude reference="pW2-ts-bqr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="restaurantImageView" destination="4ue-Ge-prP" id="lnd-jo-7G4"/>
@@ -218,4 +269,7 @@
             <point key="canvasLocation" x="461" y="348"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rating" width="256" height="256"/>
+    </resources>
 </document>

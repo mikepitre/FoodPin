@@ -30,6 +30,7 @@ class RestaurantDetailVC: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
+        
     }
     
     override func viewWillAppear(animated: Bool) {
