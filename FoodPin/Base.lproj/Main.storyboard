@@ -361,6 +361,9 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="mzR-qa-VmW" id="LaT-dX-jJb"/>
+                        <outlet property="dislikeButton" destination="BIt-Xu-71Z" id="THh-dr-1Bz"/>
+                        <outlet property="goodButton" destination="yDi-GV-BAX" id="8et-jj-SId"/>
+                        <outlet property="greatButton" destination="hDr-au-oH9" id="DKw-AO-M25"/>
                         <outlet property="ratingStackView" destination="jiY-FL-4RJ" id="Y36-xq-Btn"/>
                     </connections>
                 </viewController>
