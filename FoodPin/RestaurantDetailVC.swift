@@ -14,6 +14,7 @@ class RestaurantDetailVC: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var restaurantImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var ratingButton: UIButton!
     
 
     override func viewDidLoad() {
@@ -79,7 +80,11 @@ class RestaurantDetailVC: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func close(segue: UIStoryboardSegue) {
-        
+        if let reviewController = segue.sourceViewController as? ReviewVC {
+            if let rating = reviewController.rating {
+                ratingButton.setImage(UIImage(named: rating), forState: UIControlState.Normal)
+            }
+        }
     }
     
 
