@@ -12,6 +12,7 @@ class ReviewVC: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    @IBOutlet weak var ratingStackView: UIStackView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,16 @@ class ReviewVC: UIViewController {
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
+        
+        ratingStackView.transform = CGAffineTransformMakeScale(0.0, 0.0)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        UIView.animateWithDuration(0.4, delay: 0, options: [], animations: { () -> Void in
+            self.ratingStackView.transform = CGAffineTransformIdentity
+            }, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {

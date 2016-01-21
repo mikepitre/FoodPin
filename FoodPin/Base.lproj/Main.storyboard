@@ -351,6 +351,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="mzR-qa-VmW" id="LaT-dX-jJb"/>
+                        <outlet property="ratingStackView" destination="jiY-FL-4RJ" id="Y36-xq-Btn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pj2-8t-wvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
