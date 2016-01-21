@@ -186,7 +186,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="mcg-8c-F8T" kind="presentation" identifier="showReview" id="OzK-zu-Hfy"/>
+                                    <segue destination="mcg-8c-F8T" kind="presentation" identifier="showReview" modalTransitionStyle="crossDissolve" id="OzK-zu-Hfy"/>
                                 </connections>
                             </button>
                         </subviews>

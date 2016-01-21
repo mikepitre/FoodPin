@@ -10,6 +10,8 @@ import UIKit
 
 class ReviewVC: UIViewController {
     
+    var restaurant: Restaurant!
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var ratingStackView: UIStackView!
     @IBOutlet weak var dislikeButton: UIButton!
@@ -23,6 +25,8 @@ class ReviewVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        backgroundImageView.image = UIImage(named: restaurant.image)
         
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)

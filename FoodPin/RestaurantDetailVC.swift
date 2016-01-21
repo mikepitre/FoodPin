@@ -90,5 +90,13 @@ class RestaurantDetailVC: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showReview" {
+            if let reviewVC = segue.destinationViewController as? ReviewVC {
+                reviewVC.restaurant = restaurant
+            }
+        }
+    }
+    
 
 }
