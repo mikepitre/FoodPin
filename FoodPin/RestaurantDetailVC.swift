@@ -78,5 +78,9 @@ class RestaurantDetailVC: UIViewController, UITableViewDataSource, UITableViewDe
         return 5
     }
     
+    @IBAction func close(segue: UIStoryboardSegue) {
+        
+    }
+    
 
 }
