@@ -55,6 +55,7 @@ class RestaurantTableVC: UITableViewController {
     override func viewWillAppear(animated: Bool) {
             navigationController?.hidesBarsOnSwipe = true
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
