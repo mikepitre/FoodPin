@@ -295,17 +295,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mzR-qa-VmW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've dined here. What did you think?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2C-78-9mw">
-                                <rect key="frame" x="152" y="49" width="296" height="91"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="296" id="xiG-Qd-rks"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jiY-FL-4RJ">
-                                <rect key="frame" x="185" y="148" width="230" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jiY-FL-4RJ">
+                                <rect key="frame" x="185" y="214" width="230" height="70"/>
                                 <subviews>
                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIt-Xu-71Z">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -375,21 +366,35 @@
                                     <segue destination="h7y-se-O5C" kind="unwind" identifier="unwindToDetailView" unwindAction="close:" id="dUT-VA-LDY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You've dined here. What did you think?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2C-78-9mw">
+                                <rect key="frame" x="152" y="108" width="296" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="xiG-Qd-rks"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zEm-Ue-rT9" firstAttribute="trailing" secondItem="pC8-Mu-VIa" secondAttribute="trailingMargin" id="CDp-X6-IeO"/>
-                            <constraint firstItem="V2C-78-9mw" firstAttribute="top" secondItem="jZb-1b-Vdi" secondAttribute="bottom" constant="29" id="DR3-Am-pII"/>
+                            <constraint firstItem="V2C-78-9mw" firstAttribute="top" secondItem="jZb-1b-Vdi" secondAttribute="bottom" constant="88" id="DR3-Am-pII"/>
                             <constraint firstItem="zEm-Ue-rT9" firstAttribute="top" secondItem="jZb-1b-Vdi" secondAttribute="bottom" constant="8" id="Mjm-i9-5n9"/>
                             <constraint firstItem="mzR-qa-VmW" firstAttribute="leading" secondItem="pC8-Mu-VIa" secondAttribute="leading" id="SNP-h0-WM2"/>
                             <constraint firstAttribute="trailing" secondItem="mzR-qa-VmW" secondAttribute="trailing" id="SZR-qP-rYD"/>
                             <constraint firstItem="mzR-qa-VmW" firstAttribute="top" secondItem="pC8-Mu-VIa" secondAttribute="top" id="T6h-p5-fdR"/>
-                            <constraint firstItem="jiY-FL-4RJ" firstAttribute="top" secondItem="V2C-78-9mw" secondAttribute="bottom" constant="8" symbolic="YES" id="hi6-fX-TGX"/>
+                            <constraint firstItem="jiY-FL-4RJ" firstAttribute="top" secondItem="V2C-78-9mw" secondAttribute="bottom" constant="15" id="hi6-fX-TGX"/>
                             <constraint firstItem="jiY-FL-4RJ" firstAttribute="centerX" secondItem="V2C-78-9mw" secondAttribute="centerX" id="m7m-YJ-q7N"/>
                             <constraint firstItem="ia5-84-YXV" firstAttribute="top" secondItem="jiY-FL-4RJ" secondAttribute="bottom" constant="382" id="nad-Nb-9wq"/>
                             <constraint firstItem="mzR-qa-VmW" firstAttribute="bottom" secondItem="ia5-84-YXV" secondAttribute="top" id="oXz-1Q-MKn"/>
                             <constraint firstItem="jiY-FL-4RJ" firstAttribute="centerX" secondItem="mzR-qa-VmW" secondAttribute="centerX" id="yJO-68-M0x"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nad-Nb-9wq"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="mzR-qa-VmW" id="LaT-dX-jJb"/>
