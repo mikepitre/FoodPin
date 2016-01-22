@@ -61,6 +61,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
         let leftIconView = UIImageView(frame: CGRectMake(0, 0, 53, 53))
         leftIconView.image = UIImage(named: restaurant.image)
         annotationView?.leftCalloutAccessoryView = leftIconView
+        annotationView?.pinTintColor = UIColor(red: 242/255, green: 116/255, blue: 119/255, alpha: 1)
         
         return annotationView
         
