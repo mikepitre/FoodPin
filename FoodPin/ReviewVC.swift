@@ -70,6 +70,8 @@ class ReviewVC: UIViewController {
         default: break
         }
         
+        restaurant.isVisited = true
+        
         performSegueWithIdentifier("unwindToDetailView", sender: sender)
     }
     

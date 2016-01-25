@@ -29,16 +29,19 @@ class MapVC: UIViewController, MKMapViewDelegate {
             
             if let placemarks = placemarks {
                 
-                let placemark = placemarks[0]
+                if placemarks.count > 0 {
+                    
+                    let placemark = placemarks[0]
                 
-                let annotation = MKPointAnnotation()
-                annotation.title = self.restaurant.name
-                annotation.subtitle = self.restaurant.type
+                    let annotation = MKPointAnnotation()
+                    annotation.title = self.restaurant.name
+                    annotation.subtitle = self.restaurant.type
                 
-                if let location = placemark.location {
-                    annotation.coordinate = location.coordinate
-                    self.mapView.showAnnotations([annotation], animated: true)
-                    self.mapView.selectAnnotation(annotation, animated: true)
+                    if let location = placemark.location {
+                        annotation.coordinate = location.coordinate
+                        self.mapView.showAnnotations([annotation], animated: true)
+                        self.mapView.selectAnnotation(annotation, animated: true)
+                    }
                 }
             }
         }

@@ -39,6 +39,7 @@ class RestaurantDetailVC: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewWillAppear(animated: Bool) {
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

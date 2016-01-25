@@ -25,4 +25,5 @@ class Restaurant {
         self.image = image
         self.isVisited = isVisited
     }
+    
 }
