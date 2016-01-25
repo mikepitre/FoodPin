@@ -10,6 +10,7 @@
 		5D201A4F1C4ED49E00AE6C91 /* RestaurantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D201A4E1C4ED49E00AE6C91 /* RestaurantDetailVC.swift */; };
 		5DEB50021C5177C7000E9A82 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DEB50011C5177C7000E9A82 /* MapKit.framework */; };
 		5DEB50041C517CB4000E9A82 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEB50031C517CB4000E9A82 /* MapVC.swift */; };
+		5DEB50061C56C4D7000E9A82 /* AddRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEB50051C56C4D7000E9A82 /* AddRestaurantController.swift */; };
 		8F04A40E1C4CA90D00A69E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F04A40D1C4CA90D00A69E3D /* AppDelegate.swift */; };
 		8F04A4131C4CA90D00A69E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F04A4111C4CA90D00A69E3D /* Main.storyboard */; };
 		8F04A4151C4CA90D00A69E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F04A4141C4CA90D00A69E3D /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		5D201A4E1C4ED49E00AE6C91 /* RestaurantDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailVC.swift; sourceTree = "<group>"; };
 		5DEB50011C5177C7000E9A82 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5DEB50031C517CB4000E9A82 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		5DEB50051C56C4D7000E9A82 /* AddRestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestaurantController.swift; sourceTree = "<group>"; };
 		8F04A40A1C4CA90D00A69E3D /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F04A40D1C4CA90D00A69E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F04A4121C4CA90D00A69E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				8F04A4251C4F2BAD00A69E3D /* RestaurantDetailTableViewCell.swift */,
 				8F04A4271C50A46800A69E3D /* ReviewVC.swift */,
 				5DEB50031C517CB4000E9A82 /* MapVC.swift */,
+				5DEB50051C56C4D7000E9A82 /* AddRestaurantController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DEB50061C56C4D7000E9A82 /* AddRestaurantController.swift in Sources */,
 				8F04A4241C4F1E6C00A69E3D /* Restaurant.swift in Sources */,
 				5D201A4F1C4ED49E00AE6C91 /* RestaurantDetailVC.swift in Sources */,
 				8F04A4281C50A46800A69E3D /* ReviewVC.swift in Sources */,
