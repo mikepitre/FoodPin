@@ -8,7 +8,10 @@
 
 import UIKit
 
-class AddRestaurantController: UITableViewController {
+class AddRestaurantController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,7 @@ class AddRestaurantController: UITableViewController {
         if indexPath.row == 0 {
             if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
                 let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
                 imagePicker.allowsEditing = false
                 imagePicker.sourceType = .PhotoLibrary
                 
@@ -37,6 +41,14 @@ class AddRestaurantController: UITableViewController {
         }
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView.clipsToBounds = true
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     
