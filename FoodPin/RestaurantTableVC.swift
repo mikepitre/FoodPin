@@ -168,6 +168,7 @@ class RestaurantTableVC: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destinationViewController as! RestaurantDetailVC
                 destinationController.restaurant = restaurants[indexPath.row]
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
             }
         }
     }
