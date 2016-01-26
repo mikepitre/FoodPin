@@ -245,6 +245,9 @@
                                                     <state key="normal" title="YES">
                                                         <color key="titleColor" red="0.97268270570000004" green="1" blue="0.97697381770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="beenHereButtonPressed:" destination="e8W-Jz-BHd" eventType="touchUpInside" id="U0k-n0-idf"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s5-bG-w9o">
                                                     <rect key="frame" x="66" y="33" width="50" height="30"/>
@@ -255,6 +258,9 @@
                                                     <state key="normal" title="NO">
                                                         <color key="titleColor" red="0.97268270570000004" green="1" blue="0.97697381770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="beenHereButtonPressed:" destination="e8W-Jz-BHd" eventType="touchUpInside" id="qZR-Co-XwJ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -282,15 +288,26 @@
                                 <segue destination="R4N-B7-DQT" kind="unwind" unwindAction="unwindToHomeScreen:" id="yro-vr-Gpq"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pnX-6X-b4M">
+                            <color key="tintColor" red="0.97268270570000004" green="1" blue="0.97697381770000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="e8W-Jz-BHd" id="6Ty-vG-CoT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="smU-K5-2ol" id="j5n-2b-Cer"/>
+                        <outlet property="noButton" destination="9s5-bG-w9o" id="BZ4-E2-mIs"/>
+                        <outlet property="restaurantLocation" destination="h7R-0b-UO4" id="h82-JB-poD"/>
+                        <outlet property="restaurantName" destination="SAZ-HI-82a" id="P7T-96-TxE"/>
+                        <outlet property="restaurantType" destination="1ZM-vb-Qga" id="QCv-16-wbR"/>
+                        <outlet property="yesButton" destination="iDw-Eq-aNq" id="3I5-vB-PHt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiE-LN-O2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="R4N-B7-DQT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1959" y="-352"/>
+            <point key="canvasLocation" x="1961" y="-352"/>
         </scene>
         <!--Restaurant DetailVC-->
         <scene sceneID="dsU-19-Bj7">
